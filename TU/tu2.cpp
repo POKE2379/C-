@@ -59,6 +59,7 @@ void DFS(ALGraph &G,int v){
     }
 }
 void BFS(ALGraph &G,int v){
+    bool visited[100]={0};
     int i;
     ArcNode *p;
     int que[100],front=0,rear=0;
@@ -86,8 +87,11 @@ void BFS(ALGraph &G,int v){
 int main (){
     ALGraph G;
     CreateUDG(G);
+    cout<<"深度优先遍历结果：";
     DFS(G,0);
-   // BFS(G,0);
+    cout<<endl;
+    cout<<"广度优先遍历结果：";
+    BFS(G,0);
 
 
 return 0;

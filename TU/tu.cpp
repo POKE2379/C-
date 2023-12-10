@@ -40,6 +40,7 @@ void DFS(AMGraph &G,int v){
             DFS(G,i);
 }
 void BFS(AMGraph &G,int v){
+    bool visited[100]={0};
     int i,j;
     int que[100],front=0,rear=0;
     cout<<G.vexs[v];
@@ -65,7 +66,9 @@ void BFS(AMGraph &G,int v){
 int main(){
     AMGraph G;
     CreateUDN(G);
-   // DFS(G,0);
+    cout<<"深度优先遍历结果："<<endl;
+    DFS(G,0);
+    cout<<"\n广度优先遍历结果："<<endl;
     BFS(G,0);
     
 
